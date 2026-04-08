@@ -1,0 +1,17 @@
+.navbar {
+  display: grid;
+  /* Creates 3 columns: logo (auto width), links (takes remaining space), actions (auto) */
+  grid-template-columns: auto 1fr auto;
+  align-items: center;
+  gap: 20px;
+  padding: 10px 20px;
+}
+
+.nav-links {
+  display: grid;
+  /* Automatically creates a column for each link */
+  grid-auto-flow: column;
+  justify-content: center;
+  gap: 15px;
+  list-style: none;
+}
