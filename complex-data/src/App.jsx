@@ -4,27 +4,41 @@ import MyModal from "./components/MyModal";
 import Home from "./components/Home";
 import Spread from "./components/Spread";
 import Login from "./components/Login";
+import Destructuring from "./components/Destructuring";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCoffee } from '@fortawesome/free-solid-svg-icons'
 import './App.css'
 
 function App() {
 
   return (
     <>
-      <BrowserRouter className="navbar">
-       <div class="logo">MyLogo</div>
-        <nav className="nav-links">
+      <BrowserRouter>
+        <div className="navbar2">
           <Link to="/">Home</Link>
           <Link to="/spread">Spread</Link>
-        </nav>
-      {/* <div className="actions"><button>Login</button></div> */}
-        <Login/>
+          <Link>
+            <div className="dropdown">
+              <div className="dropbtn">Objects 
+                <i className="fa fa-caret-down"></i>
+              </div>
+              <div className="dropdown-content">
+                <Link to="/destructuring">Destructuring</Link>
+              </div>
+            </div>
+          </Link>
+          <Link className="float-right"><MyModal/></Link>
+        </div>
+       {/* <Login/> */}
         <Routes>
-          {/* Define your route paths and the components they render */}
-          <Route path="/" element={<Home />} />
-          <Route path="/spread" element={<Spread />} />
+          <Route path="/" element={<Home/>} />
+          <Route path="/spread" element={<Spread/>} />
+          <Route path="/destructuring" element={<Destructuring/>} />
         </Routes>         
       </BrowserRouter> 
-      <MyModal/>
+    <p>
+      Font Awesome <FontAwesomeIcon icon={faCoffee} />
+    </p>
     </>
   )
 }
