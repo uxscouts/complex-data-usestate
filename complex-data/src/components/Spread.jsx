@@ -1,6 +1,6 @@
 function Spread(){
     return(
-        <h2>Spread</h2>
+        <h3>Spread</h3>
     )
 }
 export default Spread;

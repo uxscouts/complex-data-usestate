@@ -1,7 +1,16 @@
 
+body {
+  padding: 0px;
+  margin: 0px;
+}
+
 body, button {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
+}
+
+.container {
+  padding: 10px 40px;
 }
 
 .navbar {
@@ -13,14 +22,7 @@ body, button {
   padding: 10px 20px;
 }
 
-.nav-links {
-  display: grid;
-  /* Automatically creates a column for each link */
-  grid-auto-flow: column;
-  justify-content: center;
-  gap: 15px;
-  list-style: none;
-}
+
 
 
 
@@ -92,4 +94,16 @@ body, button {
 
 .floatright {
   float: right;
+}
+
+.green {
+  color: green;
+}
+
+.red {
+  color: red;
+}
+
+.yellow {
+  color: yellow;
 }

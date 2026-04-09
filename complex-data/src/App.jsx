@@ -5,8 +5,10 @@ import Home from "./components/Home";
 import Spread from "./components/Spread";
 import Login from "./components/Login";
 import Destructuring from "./components/Destructuring";
+import StateInObject01 from "./components/StateInObject01";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCoffee } from '@fortawesome/free-solid-svg-icons'
+import { faChevronDown } from '@fortawesome/free-solid-svg-icons'
 import './App.css'
 
 function App() {
@@ -20,25 +22,27 @@ function App() {
           <Link>
             <div className="dropdown">
               <div className="dropbtn">Objects 
-                <i className="fa fa-caret-down"></i>
+               <FontAwesomeIcon icon={faChevronDown} />
               </div>
               <div className="dropdown-content">
                 <Link to="/destructuring">Destructuring</Link>
+                <Link to="/stateinobject01">State In Object 01</Link>
               </div>
             </div>
           </Link>
-          <Link className="float-right"><MyModal/></Link>
+          <Link><MyModal/></Link>
         </div>
        {/* <Login/> */}
-        <Routes>
-          <Route path="/" element={<Home/>} />
-          <Route path="/spread" element={<Spread/>} />
-          <Route path="/destructuring" element={<Destructuring/>} />
-        </Routes>         
+       <div className="container">
+          <Routes>
+            <Route path="/" element={<Home/>} />
+            <Route path="/spread" element={<Spread/>} />
+            <Route path="/destructuring" element={<Destructuring/>} />
+            <Route path="/stateinobject01" element={<StateInObject01/>} />
+          </Routes>
+        </div>         
       </BrowserRouter> 
-    <p>
-      Font Awesome <FontAwesomeIcon icon={faCoffee} />
-    </p>
+    {/* <p>Font Awesome <FontAwesomeIcon icon={faCoffee} /></p> */}
     </>
   )
 }
